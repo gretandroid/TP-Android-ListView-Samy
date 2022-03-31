@@ -7,11 +7,13 @@
         <entry key="..\:/Users/Samy/IdeaProjects/TPAndroidListView - Samy/app/src/main/res/layout/activity_main.xml" value="0.67" />
         <entry key="..\:/Users/Samy/IdeaProjects/TPAndroidListView/app/src/main/res/layout/activity_list_view.xml" value="0.5" />
         <entry key="..\:/Users/Samy/IdeaProjects/TPAndroidListView/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/Users/samym/AndroidStudioProjects/TPAndroidListView - Samy/app/src/main/res/layout/activity_list_view.xml" value="0.5" />
         <entry key="..\:/Users/samym/AndroidStudioProjects/TPAndroidListView - Samy/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/samym/AndroidStudioProjects/TPAndroidListView - Samy/app/src/main/res/layout/activity_user_single.xml" value="0.5" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" project-jdk-name="17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

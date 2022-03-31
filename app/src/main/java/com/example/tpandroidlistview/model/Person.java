@@ -1,10 +1,7 @@
 package com.example.tpandroidlistview.model;
 
-import android.util.Log;
-
-import com.example.tpandroidlistview.controller.DaoPerson;
-
 import java.io.Serializable;
+import java.util.Locale;
 import java.util.Objects;
 
 
@@ -14,39 +11,38 @@ public class Person implements Serializable {
     // Attributes
     private static int idCounter = 1;
     private int id;
-    private String nom, prenom;
+    private String firstName, lastName;
 
 
     // Constructors
-    public Person(String nom, String prenom) {
-        this.id = idCounter;
-        idCounter++;
-        this.nom = nom;
-        this.prenom = prenom;
+    public Person(String firstName, String lastName) {
+        this.id = idCounter++;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     // Getters
     public int getId() {
         return id;
     }
-    public String getNom() {
-        return nom;
+    public String getFirstName() {
+        return firstName;
     }
-    public String getPrenom() {
-        return prenom;
+    public String getLastName() {
+        return lastName;
     }
 
     // Setters
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
     public String toString() {
-        return id +" - "+nom+" "+prenom;
+        return id +" - "+ firstName +" "+ lastName;
     }
 
     @Override
@@ -54,7 +50,6 @@ public class Person implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return Objects.equals(getNom(), person.getNom()) && Objects.equals(getPrenom(), person.getPrenom());
+        return Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getFirstName(), person.getFirstName());
     }
-
 }

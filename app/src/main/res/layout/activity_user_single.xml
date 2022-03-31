@@ -5,68 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".AddUserActivity">
+    tools:context=".UserSingleActivity">
 
     <TextView
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/userProfileTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
         android:backgroundTint="@color/text"
         android:ems="10"
-        android:gravity="center_horizontal"
+        android:gravity="center|center_horizontal|center_vertical"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Register"
+        android:text="User Profile"
         android:textColor="@color/white"
         android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/prenomTextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/lastNameTextView"
+        android:layout_width="98dp"
         android:layout_height="wrap_content"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="First Name"
-        android:textColor="@color/text"
-        android:textSize="20dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/prenomEditText"
-        app:layout_constraintEnd_toStartOf="@+id/prenomEditText"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/prenomEditText"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingStart="10dp"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/nomTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:gravity="right"
         android:text="Last Name"
         android:textColor="@color/text"
         android:textSize="20dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/nomEditText"
-        app:layout_constraintEnd_toEndOf="@+id/prenomTextView"
-        app:layout_constraintStart_toStartOf="@+id/prenomTextView" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/lastNameEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/firstNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="First Name"
+        android:textColor="@color/text"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/firstNameEditText"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/nomEditText"
-        android:layout_width="0dp"
+        android:id="@+id/lastNameEditText"
+        android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
         android:background="@color/white"
@@ -74,22 +61,52 @@
         android:inputType="textPersonName"
         android:paddingStart="10dp"
         android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/prenomEditText"
-        app:layout_constraintStart_toStartOf="@+id/prenomEditText"
-        app:layout_constraintTop_toBottomOf="@+id/prenomEditText"
+        app:layout_constraintEnd_toEndOf="@+id/firstNameEditText"
+        app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditText"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileTextView"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/addButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/editButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#4CAF50"
-        android:onClick="addButtonOnClick"
-        android:text="Add New User"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#FFC107"
+        android:onClick="editButtonOnClick"
+        android:text="Edit User"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#F43636"
+        android:onClick="deleteButtonOnClick"
+        android:text="Delete User"
+        app:layout_constraintBottom_toBottomOf="@+id/editButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/backToUsersListButton"
@@ -97,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#4CAF50"
-        android:onClick="backToUsersListButtonOnClick"
+        android:onClick="backToUsersListButton"
         android:text="Return To Users List"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
